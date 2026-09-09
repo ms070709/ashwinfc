@@ -18,6 +18,10 @@
     box-sizing:border-box;
   }
 
+  html{
+    scroll-behavior:smooth;
+  }
+
   body{
     background:var(--navy-deep);
     color:var(--cream);
@@ -25,7 +29,7 @@
     line-height:1.6;
   }
 
-  h1,h2,h3,.crestword{
+  h1,h2,h3,h4,.crestword{
     font-family:'Trebuchet MS','Futura',sans-serif;
     letter-spacing:0.02em;
   }
@@ -39,7 +43,10 @@
     display:block;
   }
 
-  /* ===== NAV ===== */
+
+  /* =====================================================
+     NAVIGATION
+  ===================================================== */
 
   nav{
     display:flex;
@@ -60,7 +67,6 @@
     gap:12px;
   }
 
-  /* ASHWIN FC LOGO */
   .club-logo{
     width:54px;
     height:54px;
@@ -91,7 +97,7 @@
     text-decoration:none;
     color:var(--cream);
     opacity:0.85;
-    transition:opacity .2s, color .2s;
+    transition:opacity .2s,color .2s;
   }
 
   .navlinks a:hover{
@@ -99,14 +105,25 @@
     color:var(--gold);
   }
 
-  /* ===== HERO ===== */
+
+  /* =====================================================
+     HERO
+  ===================================================== */
 
   .hero{
     position:relative;
     padding:90px 6% 70px;
     background:
-      linear-gradient(160deg,rgba(7,19,36,0.9),rgba(11,28,51,0.75)),
-      repeating-linear-gradient(90deg,#123 0 60px,#0f2130 60px 120px);
+      linear-gradient(
+        160deg,
+        rgba(7,19,36,0.9),
+        rgba(11,28,51,0.75)
+      ),
+      repeating-linear-gradient(
+        90deg,
+        #123 0 60px,
+        #0f2130 60px 120px
+      );
     border-bottom:3px solid var(--gold);
     overflow:hidden;
   }
@@ -159,7 +176,109 @@
     color:var(--gold);
   }
 
-  /* ===== SECTIONS ===== */
+
+  /* =====================================================
+     OFFICIAL JERSEY SECTION
+  ===================================================== */
+
+  .jersey-section{
+    max-width:1100px;
+    margin:0 auto;
+    padding:70px 6%;
+  }
+
+  .jersey-section-inner{
+    border:1px solid var(--line);
+    background:
+      linear-gradient(
+        145deg,
+        rgba(212,175,55,0.07),
+        rgba(11,28,51,0.35)
+      );
+    border-radius:8px;
+    padding:45px;
+    overflow:hidden;
+  }
+
+  .jersey-heading{
+    text-align:center;
+    margin-bottom:35px;
+  }
+
+  .jersey-heading .small-title{
+    color:var(--gold);
+    font-size:12px;
+    letter-spacing:0.18em;
+    margin-bottom:8px;
+  }
+
+  .jersey-heading h3{
+    font-size:32px;
+    color:var(--cream);
+  }
+
+  .jersey-heading p{
+    color:#b9ae8f;
+    font-size:14px;
+    margin-top:7px;
+  }
+
+  .jersey-display{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:480px;
+    padding:20px;
+    background:
+      radial-gradient(
+        circle at center,
+        rgba(212,175,55,0.09),
+        transparent 65%
+      );
+  }
+
+  .jersey-image{
+    width:min(480px,90%);
+    max-height:620px;
+    object-fit:contain;
+    filter:drop-shadow(0 20px 25px rgba(0,0,0,0.35));
+    transition:transform .3s ease;
+  }
+
+  .jersey-image:hover{
+    transform:scale(1.03);
+  }
+
+  .jersey-details{
+    text-align:center;
+    margin-top:25px;
+  }
+
+  .jersey-details h4{
+    color:var(--gold);
+    font-size:18px;
+    margin-bottom:6px;
+  }
+
+  .jersey-details p{
+    color:#b9ae8f;
+    font-size:13px;
+  }
+
+  .jersey-tag{
+    display:inline-block;
+    margin-top:15px;
+    padding:7px 16px;
+    border:1px solid var(--line);
+    color:var(--gold);
+    font-size:11px;
+    letter-spacing:0.1em;
+  }
+
+
+  /* =====================================================
+     SECTIONS
+  ===================================================== */
 
   section{
     padding:64px 6%;
@@ -189,7 +308,42 @@
     margin-top:14px;
   }
 
-  /* ===== PLAYER PROFILE ===== */
+
+  /* =====================================================
+     TICKER
+  ===================================================== */
+
+  .ticker-wrap{
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:14px 0;
+    overflow:hidden;
+    background:var(--navy);
+  }
+
+  .ticker{
+    display:flex;
+    gap:40px;
+    white-space:nowrap;
+    animation:scroll 22s linear infinite;
+    font-size:13px;
+    color:var(--gold);
+  }
+
+  @keyframes scroll{
+    from{
+      transform:translateX(0);
+    }
+
+    to{
+      transform:translateX(-50%);
+    }
+  }
+
+
+  /* =====================================================
+     PLAYER PROFILE
+  ===================================================== */
 
   .player-wrap{
     display:grid;
@@ -208,7 +362,11 @@
   .player-photo{
     height:260px;
     background:
-      radial-gradient(circle at 50% 30%,#2c527f,#0b1c33 70%);
+      radial-gradient(
+        circle at 50% 30%,
+        #2c527f,
+        #0b1c33 70%
+      );
     display:flex;
     align-items:center;
     justify-content:center;
@@ -261,7 +419,10 @@
     margin-top:18px;
   }
 
-  /* ===== TROPHY CABINET ===== */
+
+  /* =====================================================
+     TROPHY CABINET
+  ===================================================== */
 
   .trophy-grid{
     display:grid;
@@ -293,36 +454,10 @@
     color:#b9ae8f;
   }
 
-  /* ===== MATCH TICKER ===== */
 
-  .ticker-wrap{
-    border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
-    padding:14px 0;
-    overflow:hidden;
-    background:var(--navy);
-  }
-
-  .ticker{
-    display:flex;
-    gap:40px;
-    white-space:nowrap;
-    animation:scroll 22s linear infinite;
-    font-size:13px;
-    color:var(--gold);
-  }
-
-  @keyframes scroll{
-    from{
-      transform:translateX(0);
-    }
-
-    to{
-      transform:translateX(-50%);
-    }
-  }
-
-  /* ===== NEWS ===== */
+  /* =====================================================
+     NEWS
+  ===================================================== */
 
   .news-grid{
     display:grid;
@@ -371,7 +506,10 @@
     color:#b9ae8f;
   }
 
-  /* ===== STATS ===== */
+
+  /* =====================================================
+     STATS
+  ===================================================== */
 
   table{
     width:100%;
@@ -396,7 +534,10 @@
     background:rgba(212,175,55,0.05);
   }
 
-  /* ===== SPONSORS ===== */
+
+  /* =====================================================
+     SPONSORS
+  ===================================================== */
 
   .sponsor-row{
     display:flex;
@@ -413,7 +554,10 @@
     border-radius:3px;
   }
 
-  /* ===== FAN WALL ===== */
+
+  /* =====================================================
+     FAN WALL
+  ===================================================== */
 
   .fan-grid{
     display:grid;
@@ -435,7 +579,10 @@
     font-size:12px;
   }
 
-  /* ===== FOOTER ===== */
+
+  /* =====================================================
+     FOOTER
+  ===================================================== */
 
   footer{
     text-align:center;
@@ -450,7 +597,10 @@
     margin-bottom:6px;
   }
 
-  /* ===== MOBILE ===== */
+
+  /* =====================================================
+     MOBILE
+  ===================================================== */
 
   @media(max-width:720px){
 
@@ -477,29 +627,64 @@
       width:48px;
       height:48px;
     }
+
+    .jersey-section{
+      padding:45px 5%;
+    }
+
+    .jersey-section-inner{
+      padding:25px 15px;
+    }
+
+    .jersey-heading h3{
+      font-size:26px;
+    }
+
+    .jersey-display{
+      min-height:350px;
+    }
+
+    .jersey-image{
+      width:95%;
+    }
+
+    table{
+      font-size:12px;
+    }
+
+    th,td{
+      padding:9px 6px;
+    }
   }
-</style></head><body><!-- ================= NAVIGATION ================= --><nav>  <div class="brand"><!-- ASHWIN FC LOGO -->
-<img
+</style></head><body><!-- =====================================================
+     NAVIGATION
+===================================================== --><nav>  <div class="brand"><img
   src="ashwin-logo.png"
   alt="Ashwin FC Logo"
   class="club-logo"
 >
 
 <div>
+
   <h1>Ashwin FC</h1>
+
   <span>
     ASHWIN FOOTBALL CLUB · EST. WHENEVER HE FINALLY SHOWED UP
   </span>
+
 </div>
 
-  </div>  <div class="navlinks">
-    <a href="#player">Squad</a>
-    <a href="#trophies">Honours</a>
-    <a href="#news">News</a>
-    <a href="#stats">Stats</a>
-    <a href="#sponsors">Sponsors</a>
-    <a href="#fans">Fan Wall</a>
-  </div></nav><!-- ================= HERO ================= --><section class="hero">  <div class="hero-inner"><div class="kicker">
+  </div>  <div class="navlinks"><a href="#player">Squad</a>
+<a href="#trophies">Honours</a>
+<a href="#kit">Kit</a>
+<a href="#news">News</a>
+<a href="#stats">Stats</a>
+<a href="#sponsors">Sponsors</a>
+<a href="#fans">Fan Wall</a>
+
+  </div></nav><!-- =====================================================
+     HERO
+===================================================== --><section class="hero">  <div class="hero-inner"><div class="kicker">
   OFFICIAL CLUB WEBSITE — SEASON 2026/27
 </div>
 
@@ -532,7 +717,57 @@
 
 </div>
 
-  </div></section><!-- ================= TICKER ================= --><div class="ticker-wrap">  <div class="ticker"><span>
+  </div></section><!-- =====================================================
+     OFFICIAL JERSEY
+===================================================== --><section id="kit" class="jersey-section">  <div class="jersey-section-inner"><div class="jersey-heading">
+
+  <div class="small-title">
+    ASHWIN FOOTBALL CLUB
+  </div>
+
+  <h3>
+    Official Home Jersey
+  </h3>
+
+  <p>
+    The official match jersey of Ashwin FC — Season 2026/27
+  </p>
+
+  <div class="divider" style="margin:14px auto 0;"></div>
+
+</div>
+
+
+<div class="jersey-display">
+
+  <img
+    src="ashwinfc-dress.png"
+    alt="Ashwin FC Official Jersey"
+    class="jersey-image"
+  >
+
+</div>
+
+
+<div class="jersey-details">
+
+  <h4>
+    ASHWIN FC — HOME KIT
+  </h4>
+
+  <p>
+    Official club colours • Matchday edition • Season 2026/27
+  </p>
+
+  <div class="jersey-tag">
+    OFFICIAL CLUB KIT
+  </div>
+
+</div>
+
+  </div></section><!-- =====================================================
+     MATCH TICKER
+===================================================== --><div class="ticker-wrap">  <div class="ticker"><span>
   ⚽ Ashwin FC 0 – 6 Reality Check FC
 </span>
 
@@ -564,7 +799,9 @@
   📸 Matchday: Ashwin spotted tying his shoelaces during the winning goal
 </span>
 
-  </div></div><!-- ================= PLAYER ================= --><section id="player">  <div class="section-head"><h3>Player Profile</h3>
+  </div></div><!-- =====================================================
+     PLAYER PROFILE
+===================================================== --><section id="player">  <div class="section-head"><h3>Player Profile</h3>
 
 <p class="lede">
   The one, the only, the club's sole reason for existing
@@ -615,6 +852,7 @@
 
 </div>
 
+
 <div class="player-bio">
 
   <p>
@@ -639,7 +877,9 @@
 
 </div>
 
-  </div></section><!-- ================= TROPHIES ================= --><section id="trophies">  <div class="section-head"><h3>Trophy Cabinet</h3>
+  </div></section><!-- =====================================================
+     TROPHY CABINET
+===================================================== --><section id="trophies">  <div class="section-head"><h3>Trophy Cabinet</h3>
 
 <p class="lede">
   A proud, mostly imaginary history
@@ -695,7 +935,9 @@
   </p>
 </div>
 
-  </div></section><!-- ================= NEWS ================= --><section id="news">  <div class="section-head"><h3>Latest News</h3>
+  </div></section><!-- =====================================================
+     NEWS
+===================================================== --><section id="news">  <div class="section-head"><h3>Latest News</h3>
 
 <p class="lede">
   Breaking stories from around the club
@@ -774,7 +1016,9 @@
 
 </div>
 
-  </div></section><!-- ================= STATS ================= --><section id="stats">  <div class="section-head"><h3>Season Statistics</h3>
+  </div></section><!-- =====================================================
+     STATS
+===================================================== --><section id="stats">  <div class="section-head"><h3>Season Statistics</h3>
 
 <p class="lede">
   The numbers speak for themselves
@@ -819,7 +1063,9 @@
   <td>TBD</td>
 </tr>
 
-  </table></section><!-- ================= SPONSORS ================= --><section id="sponsors">  <div class="section-head"><h3>Proud Sponsors</h3>
+  </table></section><!-- =====================================================
+     SPONSORS
+===================================================== --><section id="sponsors">  <div class="section-head"><h3>Proud Sponsors</h3>
 
 <p class="lede">
   The brands that make Ashwin FC possible
@@ -843,7 +1089,9 @@
   Excuses™ — A Trusted Brand
 </div>
 
-  </div></section><!-- ================= FAN WALL ================= --><section id="fans">  <div class="section-head"><h3>Fan Wall</h3>
+  </div></section><!-- =====================================================
+     FAN WALL
+===================================================== --><section id="fans">  <div class="section-head"><h3>Fan Wall</h3>
 
 <p class="lede">
   What the people are saying
@@ -863,6 +1111,7 @@
 
 </div>
 
+
 <div class="fan-card">
 
   "I've seen a lot of football.
@@ -874,6 +1123,7 @@
 
 </div>
 
+
 <div class="fan-card">
 
   "10/10 entertainment. 2/10 actual football."
@@ -884,7 +1134,9 @@
 
 </div>
 
-  </div></section><!-- ================= FOOTER ================= --><footer>  <p>
+  </div></section><!-- =====================================================
+     FOOTER
+===================================================== --><footer>  <p>
     Ashwin FC — Official Club Website.
     Made entirely out of love (and relentless mockery).
   </p>  <p>
