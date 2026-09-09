@@ -2,54 +2,141 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Official Website | Ashwin Football Club</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashwin FC | Official Club Website</title>
+    <!-- Google Fonts for Professional Look -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        body { font-family: 'Arial', sans-serif; background-color: #f0f2f5; text-align: center; color: #333; padding: 20px; }
-        .card { background: white; max-width: 600px; margin: 0 auto; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 8px solid #cc0000; padding: 30px; }
-        h1 { color: #cc0000; margin-bottom: 5px; }
-        .motto { font-style: italic; color: #666; margin-bottom: 25px; }
-        .stats-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-        .stats-table th, .stats-table td { border: 1px solid #ddd; padding: 10px; text-align: left; }
-        .stats-table th { background-color: #f8f9fa; }
-        ul { text-align: left; padding-left: 20px; line-height: 1.6; }
-        li { margin-bottom: 10px; }
-        .footer { margin-top: 30px; font-size: 0.8em; color: #999; }
-    </style>
-</head>
-<body>
+        :root {
+            --primary: #0d1b2a;
+            --secondary: #1b263b;
+            --accent: #e63946;
+            --gold: #ffb703;
+            --text-light: #f8f9fa;
+            --text-dark: #212529;
+            --gray-bg: #f1f3f5;
+        }
 
-    <div class="card">
-        <h1>🚨 Welcome to Ashwin Football Club 🚨</h1>
-        <p class="motto">"Where winning is strictly accidental and losing is a lifestyle."</p>
-        
-        <h3>🏆 Club Overview & Status Report</h3>
-        <p>Established recently by the worst tactical mind in football history, Ashwin FC is currently breaking records across the globe—mostly for the highest number of consecutive losses in a single afternoon.</p>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
 
-        <h3>📊 Current Season Statistics</h3>
-        <table class="stats-table">
-            <tr><th>Statistic</th><th>Ashwin FC</th></tr>
-            <tr><td>Matches Played</td><td>42</td></tr>
-            <tr><td>Matches Won</td><td>0</td></tr>
-            <tr><td>Matches Drawn</td><td>0</td></tr>
-            <tr><td>Matches Lost</td><td>42</td></tr>
-            <tr><td>Goals Scored</td><td>1 (Own Goal by Ashwin)</td></tr>
-            <tr><td>Yellow Cards (For Whining)</td><td>97</td></tr>
-        </table>
+        body {
+            background-color: var(--gray-bg);
+            color: var(--text-dark);
+        }
 
-        <h3>📢 Breaking News & Team Facts:</h3>
-        <ul>
-            <li><strong>Star Player:</strong> Ashwin handles the captaincy, coaching, and waterboy duties because nobody else wants to stand near him on the pitch.</li>
-            <li><strong>Unstoppable Strategy:</strong> The team relies on the groundbreaking "Fall down and look at the referee" tactical formation.</li>
-            <li><strong>Transfer Market Rumors:</strong> The club is actively trying to trade Ashwin for a bag of deflated footballs and a half-eaten sandwich. The other team declined.</li>
-            <li><strong>Training Regime:</strong> Practice consists entirely of Ashwin explaining why the grass was "too slippery" or the ball was "too round" every time he missed the net.</li>
-            <li><strong>Stadium Attendance:</strong> Current average attendance is 1 person (Ashwin's mom, who spends the whole time looking at her phone).</li>
-            <li><strong>Sponsorship Deals:</strong> Proudly sponsored by local tissue brands to help wipe away the tears after every single match day.</li>
-            <li><strong>Medical Update:</strong> The medical team reports that Ashwin is completely healthy, he is just unfortunately bad at kicking a ball.</li>
-            <li><strong>Upcoming Match:</strong> Next weekend, Ashwin FC faces a local group of aggressive toddlers. Bookmakers currently have the toddlers as heavy favorites to win 5-0.</li>
-        </ul>
+        /* Top Bar */
+        .top-bar {
+            background-color: #000;
+            color: var(--gold);
+            font-size: 0.8rem;
+            text-align: center;
+            padding: 6px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
 
-        <p class="footer">Warning: Viewing this website for too long might decrease your actual football skills. Enter at your own risk.</p>
-    </div>
+        /* Header & Nav */
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
 
-</body>
-</html>
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .crest {
+            width: 50px;
+            height: 50px;
+            background: var(--gold);
+            border: 3px solid var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            color: var(--primary);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            box-shadow: 0 0 10px rgba(255,183,3,0.5);
+        }
+
+        .club-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            color: var(--text-light);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        /* Hero Banner */
+        .hero {
+            background: linear-gradient(rgba(13, 27, 42, 0.85), rgba(13, 27, 42, 0.85)), 
+                        url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .hero-tag {
+            background-color: var(--accent);
+            color: white;
+            padding: 5px 15px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            border-radius: 3px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width
