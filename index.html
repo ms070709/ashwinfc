@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ashwin FC — Official Club Website</title>
-<style>
-  .club-logo {
-    width: 52px;
-    height: 52px;
-    object-fit: contain:
-  }
+<title>Ashwin FC — Official Club Website</title><style>
   :root{
     --navy:#0b1c33;
     --navy-deep:#071324;
@@ -18,21 +11,36 @@
     --red:#b6312b;
     --line:rgba(212,175,55,0.35);
   }
-  *{margin:0;padding:0;box-sizing:border-box;}
+
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+
   body{
     background:var(--navy-deep);
     color:var(--cream);
     font-family:'Georgia','Iowan Old Style',serif;
     line-height:1.6;
   }
+
   h1,h2,h3,.crestword{
     font-family:'Trebuchet MS','Futura',sans-serif;
     letter-spacing:0.02em;
   }
-  a{color:inherit;}
-  img{max-width:100%;display:block;}
+
+  a{
+    color:inherit;
+  }
+
+  img{
+    max-width:100%;
+    display:block;
+  }
 
   /* ===== NAV ===== */
+
   nav{
     display:flex;
     align-items:center;
@@ -45,41 +53,100 @@
     z-index:50;
     flex-wrap:wrap;
   }
-  .brand{display:flex;align-items:center;gap:12px;}
-  .crest{
-    width:44px;height:44px;border-radius:50%;
-    background:radial-gradient(circle at 35% 30%, #234a7c, var(--navy));
-    border:2px solid var(--gold);
-    display:flex;align-items:center;justify-content:center;
-    font-weight:bold;color:var(--gold);font-size:14px;
+
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
   }
-  .brand h1{font-size:19px;color:var(--cream);}
-  .brand span{display:block;font-size:10px;color:var(--gold);font-weight:normal;letter-spacing:0.15em;}
-  .navlinks{display:flex;gap:26px;font-size:14px;}
-  .navlinks a{text-decoration:none;color:var(--cream);opacity:0.85;transition:opacity .2s, color .2s;}
-  .navlinks a:hover{opacity:1;color:var(--gold);}
+
+  /* ASHWIN FC LOGO */
+  .club-logo{
+    width:54px;
+    height:54px;
+    object-fit:contain;
+    flex-shrink:0;
+  }
+
+  .brand h1{
+    font-size:19px;
+    color:var(--cream);
+  }
+
+  .brand span{
+    display:block;
+    font-size:10px;
+    color:var(--gold);
+    font-weight:normal;
+    letter-spacing:0.15em;
+  }
+
+  .navlinks{
+    display:flex;
+    gap:26px;
+    font-size:14px;
+  }
+
+  .navlinks a{
+    text-decoration:none;
+    color:var(--cream);
+    opacity:0.85;
+    transition:opacity .2s, color .2s;
+  }
+
+  .navlinks a:hover{
+    opacity:1;
+    color:var(--gold);
+  }
 
   /* ===== HERO ===== */
+
   .hero{
     position:relative;
     padding:90px 6% 70px;
     background:
-      linear-gradient(160deg, rgba(7,19,36,0.9), rgba(11,28,51,0.75)),
-      repeating-linear-gradient(90deg, #123 0 60px, #0f2130 60px 120px);
+      linear-gradient(160deg,rgba(7,19,36,0.9),rgba(11,28,51,0.75)),
+      repeating-linear-gradient(90deg,#123 0 60px,#0f2130 60px 120px);
     border-bottom:3px solid var(--gold);
     overflow:hidden;
   }
-  .hero-inner{max-width:760px;}
-  .kicker{color:var(--gold);font-size:13px;letter-spacing:0.1em;margin-bottom:14px;}
+
+  .hero-inner{
+    max-width:760px;
+  }
+
+  .kicker{
+    color:var(--gold);
+    font-size:13px;
+    letter-spacing:0.1em;
+    margin-bottom:14px;
+  }
+
   .hero h2{
     font-size:clamp(38px,6vw,64px);
     color:var(--cream);
     line-height:1.05;
     margin-bottom:20px;
   }
-  .hero h2 em{font-style:normal;color:var(--gold);}
-  .hero p{font-size:17px;max-width:560px;color:#dcd3bd;}
-  .hero-badges{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;}
+
+  .hero h2 em{
+    font-style:normal;
+    color:var(--gold);
+  }
+
+  .hero p{
+    font-size:17px;
+    max-width:560px;
+    color:#dcd3bd;
+  }
+
+  .hero-badges{
+    display:flex;
+    gap:14px;
+    margin-top:32px;
+    flex-wrap:wrap;
+  }
+
   .badge{
     border:1px solid var(--line);
     padding:8px 16px;
@@ -87,42 +154,104 @@
     border-radius:2px;
     background:rgba(212,175,55,0.06);
   }
-  .badge b{color:var(--gold);}
+
+  .badge b{
+    color:var(--gold);
+  }
 
   /* ===== SECTIONS ===== */
-  section{padding:64px 6%;max-width:1100px;margin:0 auto;}
-  .section-head{margin-bottom:34px;}
-  .section-head h3{font-size:28px;color:var(--cream);}
-  .section-head p.lede{color:#b9ae8f;font-size:14px;margin-top:6px;}
-  .divider{width:60px;height:3px;background:var(--gold);margin-top:14px;}
 
-  /* Player Profile */
+  section{
+    padding:64px 6%;
+    max-width:1100px;
+    margin:0 auto;
+  }
+
+  .section-head{
+    margin-bottom:34px;
+  }
+
+  .section-head h3{
+    font-size:28px;
+    color:var(--cream);
+  }
+
+  .section-head p.lede{
+    color:#b9ae8f;
+    font-size:14px;
+    margin-top:6px;
+  }
+
+  .divider{
+    width:60px;
+    height:3px;
+    background:var(--gold);
+    margin-top:14px;
+  }
+
+  /* ===== PLAYER PROFILE ===== */
+
   .player-wrap{
     display:grid;
     grid-template-columns:280px 1fr;
     gap:40px;
     align-items:start;
   }
+
   .player-card{
     background:linear-gradient(180deg,#132a49,#0d1f38);
     border:1px solid var(--line);
     border-radius:6px;
     overflow:hidden;
   }
+
   .player-photo{
     height:260px;
     background:
-      radial-gradient(circle at 50% 30%, #2c527f, #0b1c33 70%);
-    display:flex;align-items:center;justify-content:center;
-    font-size:80px;color:var(--gold);
+      radial-gradient(circle at 50% 30%,#2c527f,#0b1c33 70%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:80px;
+    color:var(--gold);
     border-bottom:2px solid var(--gold);
   }
-  .player-info{padding:18px;}
-  .player-info h4{color:var(--gold);font-size:20px;margin-bottom:4px;}
-  .player-info .num{color:#8fa5c4;font-size:13px;margin-bottom:14px;}
-  .stat-row{display:flex;justify-content:space-between;font-size:13px;padding:6px 0;border-bottom:1px dashed rgba(212,175,55,0.2);}
-  .stat-row span:last-child{color:var(--gold);font-weight:bold;}
-  .player-bio p{color:#d8cfb8;margin-bottom:14px;font-size:15px;}
+
+  .player-info{
+    padding:18px;
+  }
+
+  .player-info h4{
+    color:var(--gold);
+    font-size:20px;
+    margin-bottom:4px;
+  }
+
+  .player-info .num{
+    color:#8fa5c4;
+    font-size:13px;
+    margin-bottom:14px;
+  }
+
+  .stat-row{
+    display:flex;
+    justify-content:space-between;
+    font-size:13px;
+    padding:6px 0;
+    border-bottom:1px dashed rgba(212,175,55,0.2);
+  }
+
+  .stat-row span:last-child{
+    color:var(--gold);
+    font-weight:bold;
+  }
+
+  .player-bio p{
+    color:#d8cfb8;
+    margin-bottom:14px;
+    font-size:15px;
+  }
+
   .player-bio .quote{
     border-left:3px solid var(--red);
     padding:10px 18px;
@@ -132,23 +261,40 @@
     margin-top:18px;
   }
 
-  /* Trophy cabinet */
+  /* ===== TROPHY CABINET ===== */
+
   .trophy-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:20px;
   }
+
   .trophy{
     border:1px solid var(--line);
     background:rgba(212,175,55,0.05);
     padding:22px;
     border-radius:4px;
   }
-  .trophy .year{color:var(--gold);font-size:12px;letter-spacing:0.1em;}
-  .trophy h4{font-size:17px;margin:8px 0 6px;color:var(--cream);}
-  .trophy p{font-size:13px;color:#b9ae8f;}
 
-  /* Match record ticker */
+  .trophy .year{
+    color:var(--gold);
+    font-size:12px;
+    letter-spacing:0.1em;
+  }
+
+  .trophy h4{
+    font-size:17px;
+    margin:8px 0 6px;
+    color:var(--cream);
+  }
+
+  .trophy p{
+    font-size:13px;
+    color:#b9ae8f;
+  }
+
+  /* ===== MATCH TICKER ===== */
+
   .ticker-wrap{
     border-top:1px solid var(--line);
     border-bottom:1px solid var(--line);
@@ -156,6 +302,7 @@
     overflow:hidden;
     background:var(--navy);
   }
+
   .ticker{
     display:flex;
     gap:40px;
@@ -164,45 +311,100 @@
     font-size:13px;
     color:var(--gold);
   }
+
   @keyframes scroll{
-    from{transform:translateX(0);}
-    to{transform:translateX(-50%);}
+    from{
+      transform:translateX(0);
+    }
+
+    to{
+      transform:translateX(-50%);
+    }
   }
 
-  /* News */
+  /* ===== NEWS ===== */
+
   .news-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
     gap:22px;
   }
+
   .news-card{
     border:1px solid var(--line);
     border-radius:4px;
     overflow:hidden;
     background:#0e2038;
   }
+
   .news-thumb{
     height:130px;
-    background:repeating-linear-gradient(135deg,#1a3a63,#1a3a63 10px,#153252 10px,#153252 20px);
+    background:
+      repeating-linear-gradient(
+        135deg,
+        #1a3a63,
+        #1a3a63 10px,
+        #153252 10px,
+        #153252 20px
+      );
   }
-  .news-body{padding:16px;}
-  .news-tag{font-size:11px;color:var(--red);letter-spacing:0.08em;margin-bottom:6px;}
-  .news-body h4{font-size:16px;color:var(--cream);margin-bottom:8px;}
-  .news-body p{font-size:13px;color:#b9ae8f;}
 
-  /* Stats table */
-  table{width:100%;border-collapse:collapse;font-size:14px;}
-  th,td{padding:12px 10px;text-align:left;border-bottom:1px solid var(--line);}
-  th{color:var(--gold);font-weight:normal;font-size:12px;letter-spacing:0.08em;}
-  tr:hover td{background:rgba(212,175,55,0.05);}
+  .news-body{
+    padding:16px;
+  }
 
-  /* Sponsors */
+  .news-tag{
+    font-size:11px;
+    color:var(--red);
+    letter-spacing:0.08em;
+    margin-bottom:6px;
+  }
+
+  .news-body h4{
+    font-size:16px;
+    color:var(--cream);
+    margin-bottom:8px;
+  }
+
+  .news-body p{
+    font-size:13px;
+    color:#b9ae8f;
+  }
+
+  /* ===== STATS ===== */
+
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14px;
+  }
+
+  th,td{
+    padding:12px 10px;
+    text-align:left;
+    border-bottom:1px solid var(--line);
+  }
+
+  th{
+    color:var(--gold);
+    font-weight:normal;
+    font-size:12px;
+    letter-spacing:0.08em;
+  }
+
+  tr:hover td{
+    background:rgba(212,175,55,0.05);
+  }
+
+  /* ===== SPONSORS ===== */
+
   .sponsor-row{
     display:flex;
     flex-wrap:wrap;
     gap:16px;
     justify-content:center;
   }
+
   .sponsor{
     border:1px solid var(--line);
     padding:16px 24px;
@@ -211,12 +413,14 @@
     border-radius:3px;
   }
 
-  /* Fan wall */
+  /* ===== FAN WALL ===== */
+
   .fan-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
     gap:18px;
   }
+
   .fan-card{
     background:rgba(212,175,55,0.05);
     border:1px solid var(--line);
@@ -224,7 +428,14 @@
     border-radius:4px;
     font-size:13px;
   }
-  .fan-card .who{color:var(--gold);margin-top:10px;font-size:12px;}
+
+  .fan-card .who{
+    color:var(--gold);
+    margin-top:10px;
+    font-size:12px;
+  }
+
+  /* ===== FOOTER ===== */
 
   footer{
     text-align:center;
@@ -234,208 +445,449 @@
     border-top:2px solid var(--gold);
     background:var(--navy);
   }
-  footer p{margin-bottom:6px;}
 
-  @media (max-width:720px){
-    .player-wrap{grid-template-columns:1fr;}
-    .navlinks{gap:14px;font-size:12px;}
+  footer p{
+    margin-bottom:6px;
   }
-</style>
-</head>
-<body>
 
-<nav>
-  <div class="brand">
-    <img src="ashwin-logo.png" alt="Ashwin FC Logo" class=club-logo">
-    <div>
-      <h1>Ashwin FC</h1>
-      <span>ASHWIN FOOTBALL CLUB · EST. WHENEVER HE FINALLY SHOWED UP</span>
-    </div>
-  </div>
-  <div class="navlinks">
+  /* ===== MOBILE ===== */
+
+  @media(max-width:720px){
+
+    .player-wrap{
+      grid-template-columns:1fr;
+    }
+
+    .navlinks{
+      gap:14px;
+      font-size:12px;
+      margin-top:12px;
+      flex-wrap:wrap;
+    }
+
+    .brand h1{
+      font-size:17px;
+    }
+
+    .brand span{
+      font-size:8px;
+    }
+
+    .club-logo{
+      width:48px;
+      height:48px;
+    }
+  }
+</style></head><body><!-- ================= NAVIGATION ================= --><nav>  <div class="brand"><!-- ASHWIN FC LOGO -->
+<img
+  src="ashwin-logo.png"
+  alt="Ashwin FC Logo"
+  class="club-logo"
+>
+
+<div>
+  <h1>Ashwin FC</h1>
+  <span>
+    ASHWIN FOOTBALL CLUB · EST. WHENEVER HE FINALLY SHOWED UP
+  </span>
+</div>
+
+  </div>  <div class="navlinks">
     <a href="#player">Squad</a>
     <a href="#trophies">Honours</a>
     <a href="#news">News</a>
     <a href="#stats">Stats</a>
     <a href="#sponsors">Sponsors</a>
     <a href="#fans">Fan Wall</a>
-  </div>
-</nav>
-
-<section class="hero">
-  <div class="hero-inner">
-    <div class="kicker">OFFICIAL CLUB WEBSITE — SEASON 2026/27</div>
-    <h2>One Club.<br>One Legend.<br><em>Zero Actual Trophies.</em></h2>
-    <p>Founded on the eternal principles of showing up late, talking a big game, and never quite backing it up on the pitch. Welcome to the official home of Ashwin FC — where the banter is undefeated even if the team isn't.</p>
-    <div class="hero-badges">
-      <div class="badge"><b>Club Motto:</b> "It was offside anyway"</div>
-      <div class="badge"><b>Home Ground:</b> Wherever there's a bench</div>
-      <div class="badge"><b>Rival:</b> Anyone who's actually good</div>
-    </div>
-  </div>
-</section>
-
-<div class="ticker-wrap">
-  <div class="ticker">
-    <span>⚽ Ashwin FC 0 – 6 Reality Check FC</span>
-    <span>📋 Transfer News: Ashwin linked with a move to the substitutes' bench, again</span>
-    <span>🏆 Honours: Most Excuses in a Single Match (unofficial, self-awarded)</span>
-    <span>📸 Matchday: Ashwin spotted tying his shoelaces during the winning goal</span>
-    <span>⚽ Ashwin FC 0 – 6 Reality Check FC</span>
-    <span>📋 Transfer News: Ashwin linked with a move to the substitutes' bench, again</span>
-    <span>🏆 Honours: Most Excuses in a Single Match (unofficial, self-awarded)</span>
-    <span>📸 Matchday: Ashwin spotted tying his shoelaces during the winning goal</span>
-  </div>
+  </div></nav><!-- ================= HERO ================= --><section class="hero">  <div class="hero-inner"><div class="kicker">
+  OFFICIAL CLUB WEBSITE — SEASON 2026/27
 </div>
 
-<section id="player">
-  <div class="section-head">
-    <h3>Player Profile</h3>
-    <p class="lede">The one, the only, the club's sole reason for existing</p>
-    <div class="divider"></div>
-  </div>
-  <div class="player-wrap">
-    <div class="player-card">
-      <div class="player-photo">🧤</div>
-      <div class="player-info">
-        <h4>Ashwin</h4>
-        <div class="num">#0 · Position: Bench Specialist</div>
-        <div class="stat-row"><span>Appearances</span><span>Many (mostly on the sideline)</span></div>
-        <div class="stat-row"><span>Goals</span><span>Rumoured</span></div>
-        <div class="stat-row"><span>Assists</span><span>To his own excuses</span></div>
-        <div class="stat-row"><span>Top Speed</span><span>Fast talker, slow runner</span></div>
-        <div class="stat-row"><span>Signature Move</span><span>The Disappearing Act</span></div>
-      </div>
-    </div>
-    <div class="player-bio">
-      <p>Ashwin joined the club under mysterious circumstances and has remained its most talked-about, least reliable asset ever since. Known league-wide for his post-match interviews that are somehow longer and more dramatic than the match itself.</p>
-      <p>Scouts describe his game as "unpredictable" — mainly because nobody can predict whether he'll actually show up on time. Off the pitch, he is considered a world-class talent in the art of the confident explanation for why the ball definitely should have gone in.</p>
-      <div class="quote">"I've never seen someone celebrate a corner kick like it was a World Cup final." — Anonymous teammate</div>
-    </div>
-  </div>
-</section>
+<h2>
+  One Club.<br>
+  One Legend.<br>
+  <em>Zero Actual Trophies.</em>
+</h2>
 
-<section id="trophies">
-  <div class="section-head">
-    <h3>Trophy Cabinet</h3>
-    <p class="lede">A proud, mostly imaginary history</p>
-    <div class="divider"></div>
-  </div>
-  <div class="trophy-grid">
-    <div class="trophy">
-      <div class="year">2023</div>
-      <h4>Most Confident Pregame Speech</h4>
-      <p>Delivered with total conviction before a 5-0 loss.</p>
-    </div>
-    <div class="trophy">
-      <div class="year">2024</div>
-      <h4>Best Excuse, Runner-Up</h4>
-      <p>Lost narrowly to "the sun was in my eyes" — indoors.</p>
-    </div>
-    <div class="trophy">
-      <div class="year">2024</div>
-      <h4>Longest Water Break</h4>
-      <p>A club record that still stands unchallenged.</p>
-    </div>
-    <div class="trophy">
-      <div class="year">2025</div>
-      <h4>Most Dramatic Fall Without Contact</h4>
-      <p>Judges gave it a 9.5 for theatrics.</p>
-    </div>
-    <div class="trophy">
-      <div class="year">2025</div>
-      <h4>Fastest to Blame the Ref</h4>
-      <p>Clocked in at under two seconds post-whistle.</p>
-    </div>
-    <div class="trophy">
-      <div class="year">2026</div>
-      <h4>Club Legend (Self-Nominated)</h4>
-      <p>Voting panel: also himself.</p>
-    </div>
-  </div>
-</section>
+<p>
+  Founded on the eternal principles of showing up late,
+  talking a big game, and never quite backing it up on the pitch.
+  Welcome to the official home of Ashwin FC — where the banter
+  is undefeated even if the team isn't.
+</p>
 
-<section id="news">
-  <div class="section-head">
-    <h3>Latest News</h3>
-    <p class="lede">Breaking stories from around the club</p>
-    <div class="divider"></div>
+<div class="hero-badges">
+
+  <div class="badge">
+    <b>Club Motto:</b> "It was offside anyway"
   </div>
-  <div class="news-grid">
-    <div class="news-card">
-      <div class="news-thumb"></div>
-      <div class="news-body">
-        <div class="news-tag">MATCH REPORT</div>
-        <h4>Ashwin "Nearly" Scores Again</h4>
-        <p>Witnesses confirm the shot was close, if you count the parking lot as close.</p>
-      </div>
+
+  <div class="badge">
+    <b>Home Ground:</b> Wherever there's a bench
+  </div>
+
+  <div class="badge">
+    <b>Rival:</b> Anyone who's actually good
+  </div>
+
+</div>
+
+  </div></section><!-- ================= TICKER ================= --><div class="ticker-wrap">  <div class="ticker"><span>
+  ⚽ Ashwin FC 0 – 6 Reality Check FC
+</span>
+
+<span>
+  📋 Transfer News: Ashwin linked with a move to the substitutes' bench, again
+</span>
+
+<span>
+  🏆 Honours: Most Excuses in a Single Match (unofficial, self-awarded)
+</span>
+
+<span>
+  📸 Matchday: Ashwin spotted tying his shoelaces during the winning goal
+</span>
+
+<span>
+  ⚽ Ashwin FC 0 – 6 Reality Check FC
+</span>
+
+<span>
+  📋 Transfer News: Ashwin linked with a move to the substitutes' bench, again
+</span>
+
+<span>
+  🏆 Honours: Most Excuses in a Single Match (unofficial, self-awarded)
+</span>
+
+<span>
+  📸 Matchday: Ashwin spotted tying his shoelaces during the winning goal
+</span>
+
+  </div></div><!-- ================= PLAYER ================= --><section id="player">  <div class="section-head"><h3>Player Profile</h3>
+
+<p class="lede">
+  The one, the only, the club's sole reason for existing
+</p>
+
+<div class="divider"></div>
+
+  </div>  <div class="player-wrap"><div class="player-card">
+
+  <div class="player-photo">
+    🧤
+  </div>
+
+  <div class="player-info">
+
+    <h4>Ashwin</h4>
+
+    <div class="num">
+      #0 · Position: Bench Specialist
     </div>
-    <div class="news-card">
-      <div class="news-thumb"></div>
-      <div class="news-body">
-        <div class="news-tag">TRANSFER TALK</div>
-        <h4>Rumours Swirl Over Ashwin's Future</h4>
-        <p>Sources say he may finally be traded for a decent cone to practice dribbling around.</p>
-      </div>
+
+    <div class="stat-row">
+      <span>Appearances</span>
+      <span>Many (mostly on the sideline)</span>
     </div>
-    <div class="news-card">
-      <div class="news-thumb"></div>
-      <div class="news-body">
-        <div class="news-tag">CLUB STATEMENT</div>
-        <h4>Ashwin Denies Being Subbed Off Early</h4>
-        <p>"I asked to come off," he clarified, unconvincingly, to nobody in particular.</p>
-      </div>
+
+    <div class="stat-row">
+      <span>Goals</span>
+      <span>Rumoured</span>
     </div>
-  </div>
-</section>
 
-<section id="stats">
-  <div class="section-head">
-    <h3>Season Statistics</h3>
-    <p class="lede">The numbers speak for themselves (loudly, and not in his favour)</p>
-    <div class="divider"></div>
-  </div>
-  <table>
-    <tr><th>Stat</th><th>Value</th><th>League Rank</th></tr>
-    <tr><td>Matches Played</td><td>Plenty</td><td>—</td></tr>
-    <tr><td>Goals Scored</td><td>Still counting</td><td>Last</td></tr>
-    <tr><td>Excuses Given</td><td>Uncountable</td><td>1st</td></tr>
-    <tr><td>Confidence Level</td><td>Immeasurable</td><td>1st</td></tr>
-    <tr><td>Actual Skill Level</td><td>Under review</td><td>TBD</td></tr>
-  </table>
-</section>
+    <div class="stat-row">
+      <span>Assists</span>
+      <span>To his own excuses</span>
+    </div>
 
-<section id="sponsors">
-  <div class="section-head">
-    <h3>Proud Sponsors</h3>
-    <p class="lede">The brands that make Ashwin FC possible</p>
-    <div class="divider"></div>
-  </div>
-  <div class="sponsor-row">
-    <div class="sponsor">Instant Noodles Inc.</div>
-    <div class="sponsor">"Sorry I'm Late" Alarm Clocks</div>
-    <div class="sponsor">Bench Cushion Co.</div>
-    <div class="sponsor">Excuses™ — A Trusted Brand</div>
-  </div>
-</section>
+    <div class="stat-row">
+      <span>Top Speed</span>
+      <span>Fast talker, slow runner</span>
+    </div>
 
-<section id="fans">
-  <div class="section-head">
-    <h3>Fan Wall</h3>
-    <p class="lede">What the people are saying</p>
-    <div class="divider"></div>
-  </div>
-  <div class="fan-grid">
-    <div class="fan-card">"Every match is a mystery. Will he show up? Will he score? Will there be an excuse ready either way? Truly can't look away."<div class="who">— A Longtime Supporter</div></div>
-    <div class="fan-card">"I've seen a lot of football. I've never seen someone talk this much about doing this little."<div class="who">— Local Commentator</div></div>
-    <div class="fan-card">"10/10 entertainment. 2/10 actual football."<div class="who">— Club Statistician</div></div>
-  </div>
-</section>
+    <div class="stat-row">
+      <span>Signature Move</span>
+      <span>The Disappearing Act</span>
+    </div>
 
-<footer>
-  <p>Ashwin FC — Official Club Website. Made entirely out of love (and relentless mockery).</p>
-  <p>© 2026 Ashwin FC. All rights reserved, mostly for the roasting.</p>
-</footer>
+  </div>
 
-</body>
+</div>
+
+<div class="player-bio">
+
+  <p>
+    Ashwin joined the club under mysterious circumstances and has
+    remained its most talked-about, least reliable asset ever since.
+    Known league-wide for his post-match interviews that are somehow
+    longer and more dramatic than the match itself.
+  </p>
+
+  <p>
+    Scouts describe his game as "unpredictable" — mainly because
+    nobody can predict whether he'll actually show up on time.
+    Off the pitch, he is considered a world-class talent in the art
+    of the confident explanation for why the ball definitely should
+    have gone in.
+  </p>
+
+  <div class="quote">
+    "I've never seen someone celebrate a corner kick like it was a
+    World Cup final." — Anonymous teammate
+  </div>
+
+</div>
+
+  </div></section><!-- ================= TROPHIES ================= --><section id="trophies">  <div class="section-head"><h3>Trophy Cabinet</h3>
+
+<p class="lede">
+  A proud, mostly imaginary history
+</p>
+
+<div class="divider"></div>
+
+  </div>  <div class="trophy-grid"><div class="trophy">
+  <div class="year">2023</div>
+  <h4>Most Confident Pregame Speech</h4>
+  <p>
+    Delivered with total conviction before a 5-0 loss.
+  </p>
+</div>
+
+<div class="trophy">
+  <div class="year">2024</div>
+  <h4>Best Excuse, Runner-Up</h4>
+  <p>
+    Lost narrowly to "the sun was in my eyes" — indoors.
+  </p>
+</div>
+
+<div class="trophy">
+  <div class="year">2024</div>
+  <h4>Longest Water Break</h4>
+  <p>
+    A club record that still stands unchallenged.
+  </p>
+</div>
+
+<div class="trophy">
+  <div class="year">2025</div>
+  <h4>Most Dramatic Fall Without Contact</h4>
+  <p>
+    Judges gave it a 9.5 for theatrics.
+  </p>
+</div>
+
+<div class="trophy">
+  <div class="year">2025</div>
+  <h4>Fastest to Blame the Ref</h4>
+  <p>
+    Clocked in at under two seconds post-whistle.
+  </p>
+</div>
+
+<div class="trophy">
+  <div class="year">2026</div>
+  <h4>Club Legend (Self-Nominated)</h4>
+  <p>
+    Voting panel: also himself.
+  </p>
+</div>
+
+  </div></section><!-- ================= NEWS ================= --><section id="news">  <div class="section-head"><h3>Latest News</h3>
+
+<p class="lede">
+  Breaking stories from around the club
+</p>
+
+<div class="divider"></div>
+
+  </div>  <div class="news-grid"><div class="news-card">
+
+  <div class="news-thumb"></div>
+
+  <div class="news-body">
+
+    <div class="news-tag">
+      MATCH REPORT
+    </div>
+
+    <h4>
+      Ashwin "Nearly" Scores Again
+    </h4>
+
+    <p>
+      Witnesses confirm the shot was close,
+      if you count the parking lot as close.
+    </p>
+
+  </div>
+
+</div>
+
+
+<div class="news-card">
+
+  <div class="news-thumb"></div>
+
+  <div class="news-body">
+
+    <div class="news-tag">
+      TRANSFER TALK
+    </div>
+
+    <h4>
+      Rumours Swirl Over Ashwin's Future
+    </h4>
+
+    <p>
+      Sources say he may finally be traded for a decent cone
+      to practice dribbling around.
+    </p>
+
+  </div>
+
+</div>
+
+
+<div class="news-card">
+
+  <div class="news-thumb"></div>
+
+  <div class="news-body">
+
+    <div class="news-tag">
+      CLUB STATEMENT
+    </div>
+
+    <h4>
+      Ashwin Denies Being Subbed Off Early
+    </h4>
+
+    <p>
+      "I asked to come off," he clarified,
+      unconvincingly, to nobody in particular.
+    </p>
+
+  </div>
+
+</div>
+
+  </div></section><!-- ================= STATS ================= --><section id="stats">  <div class="section-head"><h3>Season Statistics</h3>
+
+<p class="lede">
+  The numbers speak for themselves
+  (loudly, and not in his favour)
+</p>
+
+<div class="divider"></div>
+
+  </div>  <table><tr>
+  <th>Stat</th>
+  <th>Value</th>
+  <th>League Rank</th>
+</tr>
+
+<tr>
+  <td>Matches Played</td>
+  <td>Plenty</td>
+  <td>—</td>
+</tr>
+
+<tr>
+  <td>Goals Scored</td>
+  <td>Still counting</td>
+  <td>Last</td>
+</tr>
+
+<tr>
+  <td>Excuses Given</td>
+  <td>Uncountable</td>
+  <td>1st</td>
+</tr>
+
+<tr>
+  <td>Confidence Level</td>
+  <td>Immeasurable</td>
+  <td>1st</td>
+</tr>
+
+<tr>
+  <td>Actual Skill Level</td>
+  <td>Under review</td>
+  <td>TBD</td>
+</tr>
+
+  </table></section><!-- ================= SPONSORS ================= --><section id="sponsors">  <div class="section-head"><h3>Proud Sponsors</h3>
+
+<p class="lede">
+  The brands that make Ashwin FC possible
+</p>
+
+<div class="divider"></div>
+
+  </div>  <div class="sponsor-row"><div class="sponsor">
+  Instant Noodles Inc.
+</div>
+
+<div class="sponsor">
+  "Sorry I'm Late" Alarm Clocks
+</div>
+
+<div class="sponsor">
+  Bench Cushion Co.
+</div>
+
+<div class="sponsor">
+  Excuses™ — A Trusted Brand
+</div>
+
+  </div></section><!-- ================= FAN WALL ================= --><section id="fans">  <div class="section-head"><h3>Fan Wall</h3>
+
+<p class="lede">
+  What the people are saying
+</p>
+
+<div class="divider"></div>
+
+  </div>  <div class="fan-grid"><div class="fan-card">
+
+  "Every match is a mystery. Will he show up?
+  Will he score? Will there be an excuse ready either way?
+  Truly can't look away."
+
+  <div class="who">
+    — A Longtime Supporter
+  </div>
+
+</div>
+
+<div class="fan-card">
+
+  "I've seen a lot of football.
+  I've never seen someone talk this much about doing this little."
+
+  <div class="who">
+    — Local Commentator
+  </div>
+
+</div>
+
+<div class="fan-card">
+
+  "10/10 entertainment. 2/10 actual football."
+
+  <div class="who">
+    — Club Statistician
+  </div>
+
+</div>
+
+  </div></section><!-- ================= FOOTER ================= --><footer>  <p>
+    Ashwin FC — Official Club Website.
+    Made entirely out of love (and relentless mockery).
+  </p>  <p>
+    © 2026 Ashwin FC. All rights reserved, mostly for the roasting.
+  </p></footer></body>
 </html>
